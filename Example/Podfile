@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'KDLFlutterSDK_Example' do
+  pod 'KDLFlutterSDK', :path => '../'
+
+  target 'KDLFlutterSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
