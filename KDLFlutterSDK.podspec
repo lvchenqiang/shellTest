@@ -31,8 +31,17 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
  
   # s.source_files = 'KDLFlutterSDK/Classes/**/*'
+  s.subspec 'Release' do |cs|
+    cs.ios.vendored_frameworks = "Vendor/*.framework"
+  end
+
+  s.subspec 'Debug' do |os|
+    os.ios.vendored_frameworks = "VendorDebug/*.framework"
+  end
   
-  s.ios.vendored_frameworks = "Vendor/*.framework"
+  
+
+  
   s.xcconfig = { 'OTHER_LDFLAGS' => '$(inherited) -undefined dynamic_lookup' }
 
   
