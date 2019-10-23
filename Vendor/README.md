@@ -1,2 +1,2 @@
 ##
-存放 sdk
+release framework
